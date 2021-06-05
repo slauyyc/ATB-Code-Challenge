@@ -1,0 +1,66 @@
+﻿@using EPiServer.Web.Mvc.Html
+
+@*Use the CustomPageViewModel to display the results*@
+@model CustomPageViewModel
+
+<div class="container solid">
+    <div>
+        @Html.PropertyFor(m => m.CurrentPage.Heading)
+    </div>
+
+    <div>
+        @Html.PropertyFor(x => x.CurrentPage.Image)
+    </div>
+
+    <div>
+        @Html.PropertyFor(m => m.CurrentPage.MainBody)
+    </div>
+
+    @* Add conditions to determine if there are items in the list, if not use the @Html.PropertyFo to view the items *@
+    <div class="row" style="border-style: solid; margin: 0px">
+        @if (Model.CurrentPage.ItemList != null)
+        {
+            //Check and compare if there are images before displaying the third column.
+            int listItemCount = Model.CurrentPage.ItemList.Count;
+            int nullImageCount = Model.CurrentPage.ItemList.Count(x => x.MyImage == null);
+            bool showImages = (listItemCount - nullImageCount) > 0;
+
+            if (Model.CurrentPage.ItemList.Count > 0)
+            {
+                <table class="table table-bordered table-striped col-centered" id="columnList">
+                    <tbody>
+                        <tr>
+                            <th style="text-align: center">Label</th>
+                            <th style="text-align: center">Value</th>
+                            @if (showImages)
+                            {
+                                <th style="text-align: center">Image</th>
+                            }
+                        </tr>
+
+                        @foreach (var items in Model.CurrentPage.ItemList)
+                        {
+                            <tr>
+                                <td style="text-align: center">@items.Label</td>
+                                <td style="text-align: center">@items.Value</td>
+                                @if (showImages)
+                                {
+                                    <td style="text-align: center">
+                                        @if (items.MyImage != null)
+                                        {
+                                            <img src="@Url.ContentUrl(items.MyImage)" width="30" height="30" />
+                                        }
+                                    </td>
+                                }
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        }
+        else
+        {
+            @Html.PropertyFor(m => m.CurrentPage.ItemList)
+        }
+    </div>
+</div>
