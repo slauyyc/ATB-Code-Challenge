@@ -1,0 +1,49 @@
+﻿2021-06-01 21:21:35,077 [1] ERROR EPiServer.Framework.Initialization.InitializationEngine: Initialize action failed for 'Initialize on class EPiServer.Initialization.Internal.ModelSyncInitialization, EPiServer, Version=11.15.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7'
+EPiServer.Core.TypeMismatchException: Type 'EPiServer.Core.ImageData' could not be mapped to a PropertyDefinitionType
+   at EPiServer.DataAbstraction.RuntimeModel.Internal.PropertyDefinitionSynchronizer.ResolveType(PropertyDefinitionModel model)
+   at EPiServer.DataAbstraction.RuntimeModel.Internal.PropertyDefinitionSynchronizer.CreatePropertyDefinition(PropertyDefinitionModel model, Int32 contentTypeID)
+   at EPiServer.DataAbstraction.RuntimeModel.Internal.ContentTypeModelRegister.CommitProperties(Boolean deleteUnusedTypes)
+   at EPiServer.DataAbstraction.RuntimeModel.Internal.ContentTypeModelScanner.Sync(Boolean commitChanges)
+   at EPiServer.Initialization.Internal.ModelSyncInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+EPiServer.Core.TypeMismatchException: Type 'EPiServer.Core.ImageData' could not be mapped to a PropertyDefinitionType
+   at EPiServer.DataAbstraction.RuntimeModel.Internal.PropertyDefinitionSynchronizer.ResolveType(PropertyDefinitionModel model)
+   at EPiServer.DataAbstraction.RuntimeModel.Internal.PropertyDefinitionSynchronizer.CreatePropertyDefinition(PropertyDefinitionModel model, Int32 contentTypeID)
+   at EPiServer.DataAbstraction.RuntimeModel.Internal.ContentTypeModelRegister.CommitProperties(Boolean deleteUnusedTypes)
+   at EPiServer.DataAbstraction.RuntimeModel.Internal.ContentTypeModelScanner.Sync(Boolean commitChanges)
+   at EPiServer.Initialization.Internal.ModelSyncInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+2021-06-01 21:22:03,424 [1] ERROR EPiServer.Framework.Initialization.InitializationEngine: Initialize action failed for 'Initialize on class EPiServer.Initialization.Internal.ModelSyncInitialization, EPiServer, Version=11.15.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7'
+EPiServer.Core.TypeMismatchException: Type 'System.Collections.IList' could not be mapped to a PropertyDefinitionType
+   at EPiServer.DataAbstraction.RuntimeModel.Internal.PropertyDefinitionSynchronizer.ResolveType(PropertyDefinitionModel model)
+   at EPiServer.DataAbstraction.RuntimeModel.Internal.PropertyDefinitionSynchronizer.CreatePropertyDefinition(PropertyDefinitionModel model, Int32 contentTypeID)
+   at EPiServer.DataAbstraction.RuntimeModel.Internal.ContentTypeModelRegister.CommitProperties(Boolean deleteUnusedTypes)
+   at EPiServer.DataAbstraction.RuntimeModel.Internal.ContentTypeModelScanner.Sync(Boolean commitChanges)
+   at EPiServer.Initialization.Internal.ModelSyncInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+EPiServer.Core.TypeMismatchException: Type 'System.Collections.IList' could not be mapped to a PropertyDefinitionType
+   at EPiServer.DataAbstraction.RuntimeModel.Internal.PropertyDefinitionSynchronizer.ResolveType(PropertyDefinitionModel model)
+   at EPiServer.DataAbstraction.RuntimeModel.Internal.PropertyDefinitionSynchronizer.CreatePropertyDefinition(PropertyDefinitionModel model, Int32 contentTypeID)
+   at EPiServer.DataAbstraction.RuntimeModel.Internal.ContentTypeModelRegister.CommitProperties(Boolean deleteUnusedTypes)
+   at EPiServer.DataAbstraction.RuntimeModel.Internal.ContentTypeModelScanner.Sync(Boolean commitChanges)
+   at EPiServer.Initialization.Internal.ModelSyncInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+2021-06-01 21:32:33,920 [32] ERROR EPiServer.Global: Unhandled exception in ASP.NET
+System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
